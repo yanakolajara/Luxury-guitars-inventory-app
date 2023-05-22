@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -14,15 +14,15 @@
         <nav>
             <form class="newItem">
                 Guitar name:
-                <input type="text">
+                <input id="guitarName" type="text" required>
                 <br>
                 Aproximate price:
                 <br>
-                <input class="numberInput" type="number" min="1000" max="10000" step="500">
+                <input id="price" class="numberInput" type="number" min="1000" max="10000" step="500" required>
                 <br>
                 In stock:
                 <br>
-                <select>
+                <select id="stock" required>
                     <option>--Select an option--</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -30,31 +30,38 @@
                 <br>
                 Box weight (Pounds):
                 <br>
-                <input class="numberInput" type="number" min="5" max="15" step="1">
+                <input id="weight" class="numberInput" type="number" min="5" max="15" step="1" required>
                 <br>
                 Box length (Inches):
                 <br>
-                <input class="numberInput" type="number" min="40" max="70" step="1">
+                <input id="length" class="numberInput" type="number" min="40" max="70" step="1" required>
+                <br>
+                Insert guitar image link:
+                <input id="imageLink" type="text" required>
                 <br>
                 <input type="submit">
             </form>
         </nav>
         <main>
             <div class="guitar">
-                <img src="./data/images/Les-paul-black-beauty.webp" alt="">
-                <p>Les Paul Black Beauty</p>
+                <img src="https://cdn.shopify.com/s/files/1/0916/0836/products/25783_Mockingbird_SL_Dragons_Blood_216001_1_5b582432-30f7-4335-84c2-6ba32863a14c_383x@3x.progressive.jpg?v=1571459099" alt="guitar image">
+                <p>Mockinbird 1990'</p>
+                <p>$2,000</p>
+                <p class="stock">(in stock)</p>
+                <button class="remove">Remove</button>
+                <p class="moreInfo">weight: 10lb</p>
+                <p class="moreInfo">size: 10"</p>
+            </div>
+            <div class="guitar">
+                <img src="https://www.guitarecollection.com/storage/temp/public/imageresizecache/64c/f3a/fea/64cf3afea2bfd74bf987a8754f03ac28c5100700c5dc0f185796096f1e43d110.jpg" alt="guitar image">
+                <p>Black Beauty Gibson</p>
                 <p>$2,500</p>
                 <p class="stock">(in stock)</p>
-                <input type="button" class="remove" value="Remove">
+                <button class="remove">Remove</button>
+                <p class="moreInfo">weight: 12lb</p>
+                <p class="moreInfo">size: 13"</p>
             </div>
-            <div class="guitar"></div>
-            <div class="guitar"></div>
-            <div class="guitar"></div>
-            <div class="guitar"></div>
-            <div class="guitar"></div>
-            <div class="guitar"></div>
         </main>
-        <footer></footer>
     </div>
 </body>
 </html>
