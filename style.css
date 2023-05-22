@@ -55,6 +55,11 @@ main {
     opacity: .8;
 }
 
+.reset:hover,
+.submit:hover {
+    cursor: pointer;
+}
+
 .numberInput {
     width: 150px;
 }
@@ -91,6 +96,12 @@ main {
 .stock {
     opacity: 60%;
 }
+.stock:hover {
+    color: rgb(111, 255, 0);
+    opacity: 100%;
+    font-style:italic;
+    cursor: pointer;
+}
 .remove {
     display: block;
     background-color: red;
@@ -103,6 +114,9 @@ main {
     font-size: 20px;
     font-family:'Times New Roman', Times, serif;
     border-radius: 15px;
+}
+.remove:hover {
+    cursor: pointer;
 }
 
 main .guitar:hover{

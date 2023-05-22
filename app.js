@@ -70,3 +70,6 @@ main.addEventListener('click', (event) => {
     event.target.parentNode.remove();
   }
 });
+
+// TODO: Add to stock class "onclick" to function in js
+// TODO: Function to modify stock (if/else)
