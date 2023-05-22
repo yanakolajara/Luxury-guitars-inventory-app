@@ -129,6 +129,9 @@ main .guitar:active .moreInfo{
     }
 }
 @media (max-width: 992px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
     nav {
         width: 170px;
     }
