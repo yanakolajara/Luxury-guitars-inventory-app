@@ -54,6 +54,16 @@ form.addEventListener("submit", (event) => {
     newDiv.appendChild(newLength)
 })
 
+form.addEventListener("reset", (element) => {
+    element.preventDefault();
+    document.getElementById("form")[0].value = ''
+    document.getElementById("form")[1].value = ''
+    document.getElementById("form")[2].value = '--Select an option--'
+    document.getElementById("form")[3].value = ''
+    document.getElementById("form")[4].value = ''
+    document.getElementById("form")[5].value = ''
+})
+
 const main = document.getElementById('guitars');
 main.addEventListener('click', (event) => {
   if (event.target.className === 'remove') {
