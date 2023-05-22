@@ -45,7 +45,7 @@ form.addEventListener("submit", (event) => {
 
     let newWeight = document.createElement("p")
     newWeight.setAttribute("class", "moreInfo")
-    newWeight.appendChild(document.createTextNode(`weight: ${weight}lb`))
+    newWeight.appendChild(document.createTextNode(`weight: ${weight} lb`))
     newDiv.appendChild(newWeight)
 
     let newLength = document.createElement("p")
@@ -68,8 +68,11 @@ const main = document.getElementById('guitars');
 main.addEventListener('click', (event) => {
   if (event.target.className === 'remove') {
     event.target.parentNode.remove();
+  } else if (event.target.className === 'stock') {
+    if(event.target.innerText === "(in stock)"){
+        event.target.innerText = '(out of stock)'
+    }else{
+        event.target.innerText = '(in stock)'
+    }
   }
 });
-
-// TODO: Add to stock class "onclick" to function in js
-// TODO: Function to modify stock (if/else)
