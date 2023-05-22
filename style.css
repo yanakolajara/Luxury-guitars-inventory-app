@@ -124,11 +124,12 @@ main .guitar:active .moreInfo{
 }
 
 @media (max-width: 1200px){
-
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 @media (max-width: 992px) {
-
-}
-@media (max-width: 768px) {
-    /* Rules here apply to devices from from 768px to 991px (inclusive) */
+    nav {
+        width: 170px;
+    }
 }
